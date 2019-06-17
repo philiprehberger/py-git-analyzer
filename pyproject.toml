@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "philiprehberger-git-analyzer"
-version = "0.1.0"
+version = "0.1.1"
 description = "Git repository statistics and commit analysis"
 readme = "README.md"
 license = "MIT"
@@ -15,6 +15,12 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Typing :: Typed",
 ]
+
+[project.urls]
+Homepage = "https://github.com/philiprehberger/py-git-analyzer#readme"
+Repository = "https://github.com/philiprehberger/py-git-analyzer"
+Issues = "https://github.com/philiprehberger/py-git-analyzer/issues"
+Changelog = "https://github.com/philiprehberger/py-git-analyzer/blob/main/CHANGELOG.md"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/philiprehberger_git_analyzer"]
