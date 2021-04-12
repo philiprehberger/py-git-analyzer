@@ -62,6 +62,14 @@ print(report.activity_heatmap())   # {weekday: {hour: count}}
 | `hotspots(limit)` | Most frequently changed files |
 | `activity_heatmap()` | Weekday × hour activity matrix |
 
+
+## Development
+
+```bash
+pip install -e .
+python -m pytest tests/ -v
+```
+
 ## License
 
 MIT
