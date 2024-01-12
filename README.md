@@ -3,6 +3,7 @@
 [![Tests](https://github.com/philiprehberger/py-git-analyzer/actions/workflows/publish.yml/badge.svg)](https://github.com/philiprehberger/py-git-analyzer/actions/workflows/publish.yml)
 [![PyPI version](https://img.shields.io/pypi/v/philiprehberger-git-analyzer.svg)](https://pypi.org/project/philiprehberger-git-analyzer/)
 [![License](https://img.shields.io/github/license/philiprehberger/py-git-analyzer)](LICENSE)
+[![Sponsor](https://img.shields.io/badge/sponsor-GitHub%20Sponsors-ec6cb9)](https://github.com/sponsors/philiprehberger)
 
 Git repository statistics and commit analysis.
 
