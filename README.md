@@ -6,7 +6,7 @@
 
 Git repository statistics and commit analysis.
 
-## Install
+## Installation
 
 ```bash
 pip install philiprehberger-git-analyzer
