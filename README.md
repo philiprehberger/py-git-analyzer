@@ -42,6 +42,22 @@ print(report.commits_by_weekday)   # {0: 120, 1: 115, ...} (0=Mon)
 print(report.activity_heatmap())   # {weekday: {hour: count}}
 ```
 
+### Top authors and hotspots
+
+```python
+from philiprehberger_git_analyzer import analyze
+
+report = analyze(".")
+
+# Top 5 most active contributors
+for author in report.top_authors(5):
+    print(f"{author.name}: {author.commits} commits")
+
+# Top 5 most frequently changed files
+for file in report.top_hotspots(5):
+    print(f"{file.path}: {file.change_count} changes")
+```
+
 ## API
 
 ### `analyze(repo_path, branch?, max_commits?) -> RepoReport`
@@ -61,6 +77,8 @@ print(report.activity_heatmap())   # {weekday: {hour: count}}
 | `commits_by_weekday` | Weekday → commit count |
 | `hotspots(limit)` | Most frequently changed files |
 | `activity_heatmap()` | Weekday × hour activity matrix |
+| `top_authors(n=10)` | Top N authors by commit count, descending |
+| `top_hotspots(n=10)` | Top N files by change frequency, descending |
 
 ## Development
 

@@ -96,6 +96,18 @@ class RepoReport:
             for path, count in sorted_files
         ]
 
+    def top_authors(self, n: int = 10) -> list[AuthorStats]:
+        """Return the top N authors by commit count, descending."""
+        if n <= 0:
+            return []
+        return sorted(self.authors, key=lambda a: a.commits, reverse=True)[:n]
+
+    def top_hotspots(self, n: int = 10) -> list[FileHotspot]:
+        """Return the top N files by change frequency, descending."""
+        if n <= 0:
+            return []
+        return self.hotspots(limit=n)
+
     def activity_heatmap(self) -> dict[int, dict[int, int]]:
         """Returns activity by weekday (0=Mon) and hour."""
         return dict(self._heatmap)
